@@ -1,0 +1,155 @@
+/**
+
+Filename: custom.css
+Author: Cody Mumford
+Date: 02/13/2018
+
+**/
+
+#wrapper
+{
+    margin: auto;
+    text-align: center;
+    
+    width: 100%;
+    background-color: #fff;
+    min-width: 700px;
+    max-width: 1024px;
+    text-decoration: none;
+}
+
+
+header
+{
+    color: #913730;
+    float: left;
+    line-height: 200%;
+    font-family: "Times new Roman", sans-serif, serif;
+}
+
+
+body
+{
+    color: #000;
+    line-height: 200%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1
+{
+    color: #501600;
+}
+
+#navbar
+{
+
+    width: 93%;
+    padding: auto;
+    text-align: left;
+    position:fixed;
+    z-index: 1;
+    display: block;
+    left: 0;
+    background-color: #913730;
+    overflow-x: hidden;
+    padding: 0px 450px 15px;
+
+}
+
+#navbar li
+{
+    float: left;
+    text-decoration: none;
+    list-style-type: none;     
+    padding: 5px;
+
+}
+
+#sidebar
+{
+
+    height: 90%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    display: block;
+    left: 0;
+    background-color: #913730;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+}
+
+#sidebar li
+{
+    float: left;
+    clear: both;
+    text-decoration: none;
+    list-style-type: none;     
+    padding: 5px;
+}
+
+
+.main
+{
+    margin: 0 auto;
+
+}
+
+button
+{
+    width: 100px;
+    height: 50px;
+}
+
+wrapper.footer
+{
+    position: relative;
+    clear: both;
+    height: auto;
+    width: 100%;
+    background-color: #913730;          
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+
+.footer li
+{
+    list-style-type: none;
+}
+
+table
+{
+    margin: auto;
+}
+
+.main {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin-left: 0px;
+
+    
+}
+
+p
+{
+    margin-top: auto;
+    
+}
+
+dl
+{
+margin-top: auto;
+
+}
+.main li
+{
+    margin-top: 100px;
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+}
