@@ -1,3 +1,3 @@
 <?php 
-echo '<img src="Images/zodiacbanner.png" alt=""/>';
+//echo '<img src="Images/zodiacbanner.png" alt=""/>';
 ?>

@@ -1,6 +1,6 @@
 <?php 
 $DisplayForm = TRUE;
-$Proverb;
+$Proverb = '';
 
 if (isset($_POST['Submit']))
 {
@@ -18,7 +18,7 @@ if (isset($_POST['Submit']))
 }
 
 if ($DisplayForm) {?>
-    <form name="Proverb" action="inc_proverb.php" method="post">
+    <form name="Proverb" action="index.php?page=files" method="post">
     <p>Enter a proverb: <input type="text" name="InputProverb" value="<?php echo $Proverb; ?>" /></p>
     <p><input type="reset" value="Clear Form" />&nbsp; &nbsp; <input type="submit" name="Submit" value="Send Form"/></p>
     </form>
