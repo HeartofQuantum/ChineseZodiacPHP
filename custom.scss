@@ -1,0 +1,117 @@
+/**
+
+Filename: custom.css
+Author: Cody Mumford
+Date: 03/16/2018
+
+
+
+#wrapper
+{
+    margin: auto;
+    text-align: center;
+    
+    width: 100%;
+    background-color: #fff;
+    min-width: 700px;
+    max-width: 1024px;
+    text-decoration: none;
+}
+
+*/
+
+
+@import "bootstrap";
+
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
+body
+{
+    color: #000;
+    line-height: 200%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    list-style-type: none;
+}
+
+h1
+{
+    color: #501600;
+}
+
+.footer 
+{
+    display: flex;
+}
+
+.jumbotron ul li{
+    list-style-type: none;
+    text-align: center;
+}
+
+a
+{
+    text-align: center;
+}
+
+
+
+
+.main
+{
+    margin: 0 auto;
+
+}
+
+button
+{
+    width: 100px;
+    height: 50px;
+}
+
+.footer
+{
+    position: relative;
+    width: auto;
+    clear: both;
+    bottom: 0px;
+    margin-bottom: 0px;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.footer ul {
+    float: right;
+    list-style-type: none;
+  }
+  
+.footer ul li {
+    margin-left: 15px;
+    float: left;
+    text-align: center;
+  }
+
+table
+{
+    margin: auto;
+}
+
+
+
+p
+{
+    margin-top: auto;
+    
+}
+
+dl
+{
+margin-top: auto;
+
+}
