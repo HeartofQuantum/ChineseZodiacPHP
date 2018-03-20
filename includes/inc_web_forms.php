@@ -2,8 +2,8 @@
 
     echo "<h1>Web Forms</h1>";
     echo "<ul>
-            <li><a href='index.php?page=AlphabetizeSigns&amp;section=AlphabetizeSigns'>Alphabetize Signs</a></li>
-            <li><a href='index.php?page=ZodiacGallery&amp;section=ZodiacGallery'>Zodiac Gallery</a></li>
+            <li><a href='index.php?page=inc_Alphabetize_Signs.php&amp;section=AlphabetizeSigns'>Alphabetize Signs</a></li>
+            <li><a href='index.php?page=inc_Zodiac_Gallery.php&amp;section=ZodiacGallery'>Zodiac Gallery</a></li>
         </ul>";
     echo "Web Forms and User Input
          User input for Web pages is done through Web forms. Web forms involve two components.

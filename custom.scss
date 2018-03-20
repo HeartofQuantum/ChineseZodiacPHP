@@ -5,19 +5,6 @@ Author: Cody Mumford
 Date: 03/16/2018
 
 
-
-#wrapper
-{
-    margin: auto;
-    text-align: center;
-    
-    width: 100%;
-    background-color: #fff;
-    min-width: 700px;
-    max-width: 1024px;
-    text-decoration: none;
-}
-
 */
 
 
@@ -44,10 +31,6 @@ h1
     color: #501600;
 }
 
-.footer 
-{
-    display: flex;
-}
 
 .jumbotron ul li{
     list-style-type: none;
@@ -94,7 +77,7 @@ button
 .footer ul li {
     margin-left: 15px;
     float: left;
-    text-align: center;
+    text-align: left;
   }
 
 table
