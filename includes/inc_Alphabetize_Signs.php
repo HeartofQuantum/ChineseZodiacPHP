@@ -9,9 +9,8 @@
         $Signs =  $_POST['Signs'];
         if (is_array($Signs))
         {
-            $count = count($Signs);
             sort($Signs);
-            for($i = 0; $i < $count; $i++ )
+            for($i = 0; $i < count($Signs); $i++ )
             {
                 echo "The sorted signs are: {$Signs[$i]} <br/>";   
             }

@@ -4,24 +4,58 @@
 
 
 $DisplayForm = TRUE;
-$Year; 
-$SignName = array("monkey", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "sheep", "rat", "rooster", "dog", "pig");
-$YourSign;
+$Year = 0; 
+$YourSign = "";
 $Count = 0;
 
-function ValidateAnimal($Year)
+
+$AnimalSigns = array(
+    "Rat" => array("Start Date" => 1900, "End Date" => 2020, "President" => "George Washington"),
+    "Ox" => array("Start Date" => 1901, "End Date" => 2021, "President" => "Barack Obama"), 
+    "Tiger" => array("Start Date" => 1902, "End Date" => 2022,"President" => "Dwight Eisenhower"),
+    "Rabbit" => array("Start Date" => 1903,"End Date" => 2023, "President" => "John Adams"),
+    "Dragon" => array("Start Date" => 1904, "End Date" =>2024, "President" =>"Abraham Lincoln"),
+    "Snake" => array("Start Date" => 1905, "End Date" => 2025, "President" =>"John Kennedy"),
+    "Horse" => array("Start Date" => 1906, "End Date" => 2026, "President" => "Theodore Roosevelt"),
+    "Goat" => array("Start Date" => 1907, "End Date" => 2027, "President" => "James Madison"),
+    "Monkey" => array("Start Date" => 1908, "End Date" => 2028, "President" => "Harry Truman"),
+    "Rooster" => array("Start Date" => 1909, "End Date" => 2029, "President" => "Grover Cleveland"),
+    "Dog" => array("Start Date" => 1910, "End Date" =>2030, "President" => "George Walker Bush"),
+    "Pig" =>array("Start Date" => 1911, "End Date" => 2031, "President" =>"Ronald Reagan")
+);
+
+
+
+$SignName = array("Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig");
+
+
+
+
+if (isset($_POST['Submit']))
 {
-    switch ($Year%12)
+    $Year = $_POST['Number'];
+    if (is_numeric($Year))
     {
+        $DisplayForm = FALSE;
+    }
+    else 
+    {
+        echo "<p>You must enter a numeric value.</p>\n";
+        $DisplayForm = TRUE;
+    }
+}
+
+
+switch ($Year%12)
+{
         case 0: 
             $YourSign = $SignName[0];
-            
             break;
         case 1:
-            $YourSign = $SignName[1];
+            $YourSign =$SignName[1];
             break;
         case 2: 
-            $YourSign = $SignName[2];
+            $YourSign =$SignName[2];
             break;
         case 3:
             $YourSign = $SignName[3];
@@ -51,32 +85,17 @@ function ValidateAnimal($Year)
             $YourSign = $SignName[11];
             break;
         case 12: 
-            $YourSign = $SignName[12];
+            $YourSign = explode($SignName[12]);
             break;
         default: 
             return "You didn't enter a valid number";
             break;
-    }
-}
-
-if (isset($_POST['Submit']))
-{
-    $Year = $_POST['Number'];
-    if (is_numeric($Year))
-    {
-        $DisplayForm = FALSE;
-    }
-    else 
-    {
-        echo "<p>You must enter a numeric value.</p>\n";
-        $DisplayForm = TRUE;
-    }
 }
 
 if ($DisplayForm) 
 {  ?>
-    <form name="AnimalForm" action="inc_BirthYear_ifelse.php" method="post">
-        <p>Enter a number: <input type="text" name="InputYear" value="<?php echo $Year; ?>" /></p>
+    <form name="AnimalForm" action="inc_BirthYear_switch.php" method="post">
+        <p>Enter a number: <input type="text" name="Number" value="<?php echo $Year; ?>" /></p>
         <p><input type="reset" value="Clear Form" />&nbsp; &nbsp; <input type="submit" name="Submit" value="Send Form"/></p>
     </form>
 <?php 
@@ -84,11 +103,22 @@ if ($DisplayForm)
 else 
 {
     echo "<p>Thanks for entering your year</p>";
+
     $Count += 1;
     file_put_contents($YourSign + ".txt", $Count);
+    echo "<p>Your sign is: " . $YourSign . "</p>" ;  
+    echo "<img src='Images/" . $YourSign . ".jpg' alt='" . $YourSign . "' />";
+    echo "<p>You are also the " . $Count . " person to enter your year.</p>" ;
 
-    echo "<p>Your sign is:" + $YourSign + "</p>" ;  
-    echo "<p>You are also the" + $Count + "person to enter your year.</p>" ;
-    echo "<img src='images/" . $YourSign . ".jpg' alt='" . $YourSign . "' />";
+    $SignMessage = "Your Chinese Zodiac sign is the $YourSign, you share a zodiac sign with President " . $AnimalSigns[$YourSign]["President"] . " .";
+    $SignMessage .= "Years of your sign include: ";
+    for ($i = $AnimalSigns[$YourSign]["Start Date"]; $i < $AnimalSigns[$YourSign]["End Date"];$i += 12)
+    {    
+        $SignMessage .= $i . ", ";
+        $SignMessage .= "and " . $AnimalSigns[$YourSign]["End Date"] . ".";
+    }
+
+
+
 }
 ?>
