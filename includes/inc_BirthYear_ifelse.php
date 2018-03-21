@@ -1,17 +1,21 @@
 <?php
 $DisplayForm = TRUE;
-$Year; 
-$SignName = array("monkey", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "sheep", "rat", "rooster", "dog", "pig");
-$YourSign;
-$Count = 0;
+$Year = 0; 
+
 
 function ValidateAnimal($Year)
 {
-    for($Counter = 0; $Counter < sizeof($SignName); $Counter++)
+    $Signs = array("Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig");
+    for($i = 0; $i < count($Signs); $i++)
     {
-        if ($Year %12 == $Counter)
+        if ($Year%12 == $i)
         {
-            $YourSign = $SignName[$Counter];
+            $Count;
+            $YourSign = $Signs[$i];
+            $Count += 1;
+            file_put_contents("statistics/" . $YourSign . ".txt", $Count);
+            echo "<p>Your sign is: $YourSign</p>";    
+            echo "<img src='Images/" . $YourSign . ".jpg' alt='" . $YourSign . "' />";
         }
     }
 }
@@ -38,13 +42,10 @@ if ($DisplayForm) {?>
 <?php }
 else 
 {
-    echo "<p>Thanks for entering your year</p>";
-    ValidateAnimal();
+    echo "<p>Thanks for entering your year!</p>";
+    ValidateAnimal($Year);
     
-    $Count += 1;
-    file_put_contents("statistics/" + $YourSign + ".txt", $Count);
-    echo "<p>Your sign is: $</p>";    
-    echo "<img src='images/" . $YourSign . ".jpg' alt='" . $YourSign . "' />";
+
 }
 ?>
 
