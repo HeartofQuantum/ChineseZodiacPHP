@@ -3,10 +3,12 @@
 echo 
 "<div class='navbar navbar-expand-lg navbar-light bg-light'>";
 
-if (file_exists('Images/newZodiac.png'))
-  echo
+include("Includes/inc_banner_display.php");
+$image = $banner_array[$banner_index]; 
+
+echo
   "<a href='index.php?page=home_page'>
-    <img src='Images/newZodiac.png' alt=''/>
+    <img src='Images/" . $image . "alt='[Banner Ad]' title='Banner Ad'/>
   </a>";
 
 
@@ -49,6 +51,3 @@ echo
 </div>";
 
 ?>
-<!--
-  
-    -->

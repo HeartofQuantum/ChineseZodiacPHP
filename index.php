@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="author" content="Cody Mumford"/>
-    <meta name="revised" content="03/28/2018"/>
+    <meta name="revised" content="04/24/2018"/>
     <meta name="index.php" content="index.php"/>
     <meta name="description" content="home page of Chinese Zodiac "/>
     <meta name="keywords" content="chinese zodiac"/>
@@ -33,8 +33,9 @@
             
             <!-- Text File -->
             <div class="center jumbotron">
-                <?php include 'includes/inc_home_links_bar.php';
-                
+                <?php
+                    session_start();
+                    include 'includes/inc_home_links_bar.php';
                     if (isset($_GET['page']))
                     {
                         switch($_GET['page'])
