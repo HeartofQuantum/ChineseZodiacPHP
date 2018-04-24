@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="author" content="Cody Mumford"/>
-    <meta name="revised" content="03/16/2018"/>
+    <meta name="revised" content="03/28/2018"/>
     <meta name="index.php" content="index.php"/>
     <meta name="description" content="home page of Chinese Zodiac "/>
     <meta name="keywords" content="chinese zodiac"/>
@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="custom.css"/>
-    <title>Chinese Zodiac</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-AuEr11i558k+Xa9Spnw45VKJGyQKeqddQG1ASFxPamSRm5fl/sQYzrRK4H37gJ7W" crossorigin="anonymous">
+    <link rel="stylesheet" href="includes/custom.scss"/>
+    <title>Cody Mumford | Chinese Zodiac</title>
 </head>
 
 <!-- Content -->

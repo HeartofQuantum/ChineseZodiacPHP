@@ -24,7 +24,7 @@
     
     echo "<a id='for_loop'>For Loop</a>
         <p>This script counts the number of times each letter appears in a string and compares that count to the number of times each letter appears in the names of the Chinese zodiac signs to determine if the names can be made from the characters in the string.</p>
-        <a href='Chinese_Zodiac_for_loop.php'>[Test the Script]</a>
+        <a href='includes/inc_Chinese_Zodiac_for_loop.php'>[Test the Script]</a>
         <a href='includes/ShowSourceCode.php?source_file=inc_Chinese_Zodiac_for_loop.php'>[View the Source]</a>";
-        
+
 ?>

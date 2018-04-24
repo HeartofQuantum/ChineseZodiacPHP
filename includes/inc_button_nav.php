@@ -1,19 +1,20 @@
 <?php
 
 echo 
-"<div class='navbar navbar-expand-lg navbar-light bg-light' >
+"<div class='navbar navbar-expand-lg navbar-light bg-light'>";
 
-
-  <a href='index.php?page=home_page'>
+if (file_exists('Images/newZodiac.png'))
+  echo
+  "<a href='index.php?page=home_page'>
     <img src='Images/newZodiac.png' alt=''/>
-  </a> 
+  </a>";
 
 
+echo
+  "
   <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
     <span class='navbar-toggler-icon'></span>
   </button>
-
-
 
   <div class='navbar-collapse collapse w-100 order-3 dual-collapse2' id='navbarSupportedContent'>
   <ul class='navbar-nav ml-auto>
